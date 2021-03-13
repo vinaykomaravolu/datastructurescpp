@@ -1,0 +1,2 @@
+/usr/bin/ar qc libHashmap_lib.a  CMakeFiles/Hashmap_lib.dir/src/main.cpp.o
+/usr/bin/ranlib libHashmap_lib.a
