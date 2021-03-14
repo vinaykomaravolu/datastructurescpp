@@ -16,7 +16,11 @@ int main(int, char **)
     HashMap<int, int> map_default = HashMap<int, int>();
     for (int i = 0; i < 100; i++)
     {
-        cout << i << endl;
         map_default.put(i, i);
     }
+    for (int i = 0; i < 100; i++)
+    {
+        map_default.remove(i);
+    }
+    cout << map_default.size();
 }

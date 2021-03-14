@@ -60,15 +60,15 @@ include test/CMakeFiles/Hashmap_test.dir/flags.make
 test/CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.o: test/CMakeFiles/Hashmap_test.dir/flags.make
 test/CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.o: ../test/hashmap-test.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinay/Projects/hashmapcpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.o"
-	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.o -c /home/vinay/Projects/hashmapcpp/test/hashmap-test.cpp
+	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.o -c /home/vinay/Projects/hashmapcpp/test/hashmap-test.cpp
 
 test/CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.i"
-	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinay/Projects/hashmapcpp/test/hashmap-test.cpp > CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.i
+	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinay/Projects/hashmapcpp/test/hashmap-test.cpp > CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.i
 
 test/CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.s"
-	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinay/Projects/hashmapcpp/test/hashmap-test.cpp -o CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.s
+	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinay/Projects/hashmapcpp/test/hashmap-test.cpp -o CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.s
 
 test/CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.o.requires:
 
@@ -84,15 +84,15 @@ test/CMakeFiles/Hashmap_test.dir/hashmap-test.cpp.o.provides.build: test/CMakeFi
 test/CMakeFiles/Hashmap_test.dir/main.cpp.o: test/CMakeFiles/Hashmap_test.dir/flags.make
 test/CMakeFiles/Hashmap_test.dir/main.cpp.o: ../test/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinay/Projects/hashmapcpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/Hashmap_test.dir/main.cpp.o"
-	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/x86_64-linux-gnu-g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hashmap_test.dir/main.cpp.o -c /home/vinay/Projects/hashmapcpp/test/main.cpp
+	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hashmap_test.dir/main.cpp.o -c /home/vinay/Projects/hashmapcpp/test/main.cpp
 
 test/CMakeFiles/Hashmap_test.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hashmap_test.dir/main.cpp.i"
-	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinay/Projects/hashmapcpp/test/main.cpp > CMakeFiles/Hashmap_test.dir/main.cpp.i
+	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinay/Projects/hashmapcpp/test/main.cpp > CMakeFiles/Hashmap_test.dir/main.cpp.i
 
 test/CMakeFiles/Hashmap_test.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hashmap_test.dir/main.cpp.s"
-	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinay/Projects/hashmapcpp/test/main.cpp -o CMakeFiles/Hashmap_test.dir/main.cpp.s
+	cd /home/vinay/Projects/hashmapcpp/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinay/Projects/hashmapcpp/test/main.cpp -o CMakeFiles/Hashmap_test.dir/main.cpp.s
 
 test/CMakeFiles/Hashmap_test.dir/main.cpp.o.requires:
 

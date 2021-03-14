@@ -1,1 +1,1 @@
-/usr/bin/x86_64-linux-gnu-g++-7  -g   CMakeFiles/Hashmap.dir/src/main.cpp.o  -o Hashmap 
+/usr/bin/c++  -g   CMakeFiles/Hashmap.dir/src/main.cpp.o  -o Hashmap 

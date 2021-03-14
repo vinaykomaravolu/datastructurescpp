@@ -10,7 +10,7 @@ class HashNode
 public:
     K key;
     V value;
-    HashNode<K, V> *next;
+    HashNode<K, V> *next = nullptr;
 
     HashNode(K key, V value)
     {
