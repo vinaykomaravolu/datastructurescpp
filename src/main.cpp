@@ -2,6 +2,7 @@
 #include <string>
 #include <assert.h>
 #include "hashmap.hpp"
+#include "linkedlist.hpp"
 
 using namespace std;
 
@@ -22,5 +23,14 @@ int main(int, char **)
     {
         map_default.remove(i);
     }
-    cout << map_default.size();
+
+    LinkedList<int> ll;
+    for (int i = 0; i <= 1000; i++)
+    {
+        ll.push(i * i);
+        ll.remove(0);
+        ll.push(i * i);
+        ll.pop();
+    }
+    return 0;
 }
