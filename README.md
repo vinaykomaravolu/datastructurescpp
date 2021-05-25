@@ -1,13 +1,17 @@
 # datastructurescpp
 
-Header only libraries for various data structure implementations. Examples are shown in the tests folder. Although these implementations may not not ideal, they are one of many. This project was created for learning about various datastructures and implementing them from scratch.
+Header only libraries for various data structure implementations. Examples are shown in the tests folder. Although these implementations may not not ideal, they are one of many. This project was created for learning about various datastructures and implementing them from scratch. All header files are located in the include folder.
 
-## Setup:
+## Setup Repo:
 1. git clone --recurse-submodules https://github.com/vinaykomaravolu/datastructurescpp.git
 2. cd datastructurescp
 3. git submodule update
 4. mkdir build && cd build
 5. cmake ..
+
+## Setup in own project
+1. git clone --recurse-submodules https://github.com/vinaykomaravolu/datastructurescpp.git
+2. copy files from /include folder to your own project
 
 ## Features
 
