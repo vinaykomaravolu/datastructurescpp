@@ -2,7 +2,7 @@
 
 Header only libraries for various data structure implementations. Examples are shown in the tests folder. Although these implementations may not not ideal, they are one of many. This project was created for learning about various datastructures and implementing them from scratch.
 
-##Setup:
+## Setup:
 1. git clone --recurse-submodules https://github.com/vinaykomaravolu/datastructurescpp.git
 2. cd datastructurescp
 3. git submodule update
