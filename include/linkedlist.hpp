@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <stdexcept>
 
@@ -24,6 +25,35 @@ public:
     {
     }
 
+    LinkedListNode<T> *getNode(int index)
+    {
+        if (!head)
+        {
+            return;
+        }
+        if (index == 0)
+        {
+            return head;
+        }
+        else if (index == this->count)
+        {
+            return tail;
+        }
+        else
+        {
+            int i = 0;
+            LinkedListNode<T> *curr = head while (curr)
+            {
+                if (i == index)
+                {
+                    return curr;
+                }
+                curr = curr->next;
+                i++;
+            }
+        }
+    }
+
     void push(T val)
     {
         LinkedListNode<T> *node = new LinkedListNode<T>(val);
@@ -38,6 +68,23 @@ public:
         tail->next = node;
         tail = node;
         this->count++;
+        return;
+    }
+
+    void push(LinkedListNode<T> *node)
+    {
+        if (!head)
+        {
+            head = node;
+            tail = head;
+            this->count++;
+
+            return node;
+        }
+        tail->next = node;
+        tail = node;
+        this->count++;
+        return node;
     }
 
     void pop()
@@ -69,13 +116,22 @@ public:
         }
     }
 
-    T front()
+    T end()
     {
         if (!tail)
         {
             throw invalid_argument("Linked list empty");
         }
         return tail->val;
+    }
+
+    T Front()
+    {
+        if (!head)
+        {
+            throw invalid_argument("Linked list empty");
+        }
+        return head->val;
     }
 
     void insert(T val, int index)
@@ -93,6 +149,52 @@ public:
             throw invalid_argument("index out of bounds");
         }
         LinkedListNode<T> *node = new LinkedListNode<T>(val);
+        if (index == 0)
+        {
+            node->next = head;
+            head = node;
+            this->count++;
+        }
+        else if (index == this->count)
+        {
+            tail->next = node;
+            tail = node;
+            this->count++;
+        }
+        else
+        {
+            int i = 1;
+            LinkedListNode<T> *curr = head->next;
+            LinkedListNode<T> *prev = head;
+            while (curr)
+            {
+                if (i == index)
+                {
+                    prev->next = node;
+                    node->next = curr;
+                    this->count++;
+                    return;
+                }
+                curr = curr->next;
+                prev = prev->next;
+                i++;
+            }
+        }
+    }
+
+    void insert(LinkedListNode<T> *node, int index)
+    {
+        if (!head)
+        {
+            head = node;
+            tail = head;
+            this->count++;
+            return;
+        }
+        if (index > this->count || index < 0)
+        {
+            throw invalid_argument("index out of bounds");
+        }
         if (index == 0)
         {
             node->next = head;
@@ -164,6 +266,44 @@ public:
         }
     }
 
+    void remove(LinkedListNode<T> *node)
+    {
+        if (!head)
+        {
+            return;
+        }
+        if (node == head)
+        {
+            LinkedListNode<T> *curr = head->next;
+            delete head;
+            head = curr;
+            this->count--;
+        }
+        else if (node == tail)
+        {
+            this->pop();
+        }
+        else
+        {
+            int i = 1;
+            LinkedListNode<T> *curr = head->next;
+            LinkedListNode<T> *prev = head;
+            while (curr)
+            {
+                if (node == curr)
+                {
+                    prev->next = curr->next;
+                    delete curr;
+                    this->count--;
+                    return;
+                }
+                curr = curr->next;
+                prev = prev->next;
+                i++;
+            }
+        }
+    }
+
     void display()
     {
         LinkedListNode<T> *curr = head;
@@ -184,6 +324,22 @@ public:
     bool empty()
     {
         return this->count == 0;
+    }
+
+    T get(int index)
+    {
+        LinkedListNode<T> *curr = head;
+        int i = 0;
+        while (curr)
+        {
+            if (index == i)
+            {
+                return curr->val;
+            }
+            curr = curr->next;
+            i++;
+        }
+        throw invalid_argument("index out of bounds");
     }
 
 private:

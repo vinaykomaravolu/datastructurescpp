@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "hashmap.hpp"
 #include "linkedlist.hpp"
+#include "cache.hpp"
 
 using namespace std;
 

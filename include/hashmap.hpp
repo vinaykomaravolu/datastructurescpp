@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <functional>
 #include <vector>
@@ -37,14 +38,18 @@ public:
         storage.resize(this->hashsize, nullptr);
     }
 
-    ~HashMap(){
-        for(int i = 0; i < this->storage.size(); i++){
-            if(this->storage[i] == nullptr){
+    ~HashMap()
+    {
+        for (int i = 0; i < this->storage.size(); i++)
+        {
+            if (this->storage[i] == nullptr)
+            {
                 continue;
             }
-            HashNode<K,V> * curr = this->storage[i];
-            HashNode<K,V> * temp = nullptr;
-            while(curr){
+            HashNode<K, V> *curr = this->storage[i];
+            HashNode<K, V> *temp = nullptr;
+            while (curr)
+            {
                 temp = curr;
                 curr = curr->next;
                 delete temp;
@@ -56,21 +61,27 @@ public:
     void put(K key, V value)
     {
         int index = this->hashIndex(key);
-        if(storage[index] == nullptr){
-            HashNode<K,V> * newNode = new HashNode<K,V>(key, value);
+        if (storage[index] == nullptr)
+        {
+            HashNode<K, V> *newNode = new HashNode<K, V>(key, value);
             storage[index] = newNode;
-            this->allocatedsize++;                
-        }else{
-            HashNode<K,V> * node = storage[index];
-            while(node != nullptr){
-                if(node->key == key){
+            this->allocatedsize++;
+        }
+        else
+        {
+            HashNode<K, V> *node = storage[index];
+            while (node != nullptr)
+            {
+                if (node->key == key)
+                {
                     node->value = value;
                     return;
                 }
-                if(node->next == nullptr){
-                    HashNode<K,V> * newNode = new HashNode<K,V>(key, value);
+                if (node->next == nullptr)
+                {
+                    HashNode<K, V> *newNode = new HashNode<K, V>(key, value);
                     node->next = newNode;
-                    this->allocatedsize++;                
+                    this->allocatedsize++;
                     return;
                 }
                 node = node->next;
@@ -78,11 +89,14 @@ public:
         }
     }
 
-    V * get(K key){
+    V *get(K key)
+    {
         int index = this->hashIndex(key);
-        HashNode<K,V> * node = storage[index];
-        while(node != nullptr){
-            if(node->key == key){
+        HashNode<K, V> *node = storage[index];
+        while (node != nullptr)
+        {
+            if (node->key == key)
+            {
                 return &node->value;
             }
             node = node->next;
@@ -90,18 +104,34 @@ public:
         return nullptr;
     }
 
-    bool remove(K key){
+    bool exists(K key)
+    {
+        V *curr = this->get(key);
+        if (curr != nullptr)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    bool remove(K key)
+    {
         int index = this->hashIndex(key);
-        HashNode<K,V> * node = storage[index];
-        HashNode<K,V> * prev = nullptr;
-        while(node != nullptr){
-            if(node->key == key){
-                if(prev == nullptr){
+        HashNode<K, V> *node = storage[index];
+        HashNode<K, V> *prev = nullptr;
+        while (node != nullptr)
+        {
+            if (node->key == key)
+            {
+                if (prev == nullptr)
+                {
                     storage[index] = node->next;
-                }else{
+                }
+                else
+                {
                     prev->next = node->next;
                 }
-                this->allocatedsize--;                
+                this->allocatedsize--;
                 delete node;
                 return true;
             }
@@ -111,7 +141,8 @@ public:
         return false;
     }
 
-    size_t size(){
+    size_t size()
+    {
         return this->allocatedsize;
     }
 
@@ -121,7 +152,8 @@ private:
     size_t hashsize;
     size_t allocatedsize;
 
-    int hashIndex(K key){
+    int hashIndex(K key)
+    {
         return int(this->hashf(key) % this->hashsize);
     }
 };

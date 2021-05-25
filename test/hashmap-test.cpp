@@ -153,3 +153,10 @@ TEST(HashMapTest, StressTest)
     }
     EXPECT_EQ(0, map.size());
 }
+
+TEST(HashMapTest, KeyExists)
+{
+    HashMap<string, int> map = HashMap<string, int>();
+    map.put("testA", 1);
+    EXPECT_TRUE(map.exists("testA"));
+}
